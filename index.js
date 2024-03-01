@@ -1,6 +1,8 @@
 if (window.location.href.indexOf("?") != -1) {
     var raiz = window.location.href.split("?").pop();
 
+    raiz = raiz.split(".").join("").split("/").join("").split("-").join("");
+
     if (raiz.length != 8 && raiz.length != 12) {
         document.getElementById("resultado").innerText = "Informe a raiz do CNPJ com oito dígitos ou um estabelecimento com doze dígitos.";
     }
